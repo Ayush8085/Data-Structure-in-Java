@@ -2,12 +2,17 @@ public class HashTableJava {
     public static void main(String[] args) {
 
         HashTable table = new HashTable();
+        
+        System.out.println(table.isEmpty());
+
         table.put(105, "Ayush");
         table.put(5, "Chirag");
         table.put(23, "Ujjwal");
 
         System.out.println(table.size());
-        System.out.println(table.get(6));
+        System.out.println(table.remove(33));
+        System.out.println(table.size());
+        System.out.println(table.isEmpty());
     }
 }
 
@@ -46,7 +51,7 @@ class HashTable {
     }
 
     // Hash function
-    public int getBucketIndex(int key) {
+    private int getBucketIndex(int key) {
         return key % numOfBuckets;
     }
 
@@ -82,5 +87,31 @@ class HashTable {
             head = head.next;
         }
         return null;
+    }
+
+    public String remove(int key) {
+        int bucketIndex = getBucketIndex(key);
+        HashNode head = buckets[bucketIndex];
+        HashNode prev = null;
+
+        while(head != null) {
+            if(head.key == key) {
+                break;
+            }
+            prev = head;
+            head = head.next;
+        }
+        if(head == null) {
+            return null;
+        }
+        size--;
+        if(prev != null) {
+            prev.next = head.next;
+        }
+        else {
+            buckets[bucketIndex] = head.next;
+        }
+
+        return head.value;
     }
 }
