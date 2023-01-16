@@ -1,4 +1,6 @@
 public class knap_sack_tab {
+
+    // Find the maximum profit that can be made if val and weight of item is given and maximum weight the knapsack can hold is given
     
     public static void main(String[] args) {
         

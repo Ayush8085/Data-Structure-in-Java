@@ -15,8 +15,6 @@ public class fibonacci {
         System.out.println(fib(50, map));
         System.out.println(fib(70, map));
 
-        // System.out.println();
-        // System.out.println(map);
     }
 
     private static long fib(int n, Map<Integer, Long> map) {
