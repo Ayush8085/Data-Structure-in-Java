@@ -18,19 +18,19 @@ public class Minimum_Diff_Element {
         // int floor = -1;
         // int ceil = -1;
         // while (start <= end) {
-        // mid = end - (end - start) / 2;
+        //     mid = end - (end - start) / 2;
 
-        // if (arr[mid] == k) {
-        // floor = arr[mid];
-        // ceil = arr[mid];
-        // break;
-        // } else if (arr[mid] < k) {
-        // start = mid + 1;
-        // floor = arr[mid];
-        // } else {
-        // end = mid - 1;
-        // ceil = arr[mid];
-        // }
+        //     if (arr[mid] == k) {
+        //         floor = arr[mid];
+        //         ceil = arr[mid];
+        //         break;
+        //     } else if (arr[mid] < k) {
+        //         start = mid + 1;
+        //         floor = arr[mid];
+        //     } else {
+        //         end = mid - 1;
+        //         ceil = arr[mid];
+        //     }
         // }
 
         // // System.out.println("Floor: " +floor);
@@ -40,9 +40,9 @@ public class Minimum_Diff_Element {
         // int ceilDiff = Math.abs(k - ceil);
 
         // if (floorDiff < ceilDiff)
-        // System.out.println(floor);
+        //     System.out.println(floor);
         // else
-        // System.out.println(ceil);
+        //     System.out.println(ceil);
 
         // ---------------NORMAL BINARY SEARCH APPROACH-----------------
 

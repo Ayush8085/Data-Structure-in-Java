@@ -15,7 +15,6 @@ public class Find_Floor_of_Element {
         while (start <= end) {
             mid = end - (end - start) / 2;
 
-            // if(mid==0)
             if (arr[mid] > k) {
                 end = mid - 1;
             } else if (arr[mid] <= k) {

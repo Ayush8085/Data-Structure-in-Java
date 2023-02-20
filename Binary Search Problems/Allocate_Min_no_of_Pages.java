@@ -3,20 +3,31 @@ public class Allocate_Min_no_of_Pages {
     // Return the minimum maximum number of pages to be allocated from the given
     // array of book to 'k' students.
 
+    // NOTE :- THE ARRAY CAN BE UNSORTED ALSO.
+
     // Constraints :- 1. distribute among 'k' students.
     // 2. Atleast 1 book must be allocated to each student.
     // 3. Books must be distributed continuously.
 
     public static void main(String[] args) {
 
-        int[] arr = { 10, 20, 30, 40 };
+        // int[] arr = { 10, 20, 30, 40 }; // 60
+        int[] arr = { 20, 10, 40, 30 }; // 70
         int k = 2;
 
         int start = 0;
-        int end = 0;
+        int max = arr[0];
+        for (int i : arr) {
+            if (max < i) {
+                max = i;
+            }
+        }
 
-        for (int i = 0; i < arr.length; i++) {
-            end += arr[i];
+        start = max;
+
+        int end = 0;
+        for (int i : arr) {
+            end += i;
         }
 
         int mid = 0;
@@ -31,6 +42,7 @@ public class Allocate_Min_no_of_Pages {
             } else {
                 start = mid + 1;
             }
+
         }
 
         System.out.println(res);
@@ -41,11 +53,12 @@ public class Allocate_Min_no_of_Pages {
         int student = 1;
 
         int sum = 0;
-        for (int i = 0; i < n; i++) {
-            sum += arr[i];
+
+        for (int i : arr) {
+            sum += i;
             if (sum > limit) {
                 student++;
-                sum = arr[i];
+                sum = i;
                 if (student > k) {
                     return false;
                 }

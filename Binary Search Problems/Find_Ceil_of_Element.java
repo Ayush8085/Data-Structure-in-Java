@@ -13,27 +13,6 @@ public class Find_Ceil_of_Element {
 
         int res = Integer.MIN_VALUE;
 
-        // while (start <= end) {
-        // mid = end - (end - start) / 2;
-
-        // if (arr[mid] == k) {
-        // res = arr[mid];
-        // break;
-        // } else if (arr[mid] <= k) {
-        // start = mid + 1;
-
-        // res = arr[mid + 1];
-        // } else if (arr[mid] > k) {
-        // end = mid - 1;
-        // }
-        // }
-
-        // if (res < 0)
-        // System.out.println(arr[0]);
-        // else
-        // System.out.println(res);
-
-        // -------------------ANOTHER WAY--------------------
         while (start <= end) {
             mid = end - (end - start) / 2;
 
@@ -50,5 +29,27 @@ public class Find_Ceil_of_Element {
         }
 
         System.out.println(res);
+
+        // -------------------ANOTHER WAY--------------------
+
+        // while (start <= end) {
+        //     mid = end - (end - start) / 2;
+
+        //     if (arr[mid] == k) {
+        //         res = arr[mid];
+        //         break;
+        //     } else if (arr[mid] <= k) {
+        //         start = mid + 1;
+
+        //         res = arr[mid + 1];
+        //     } else if (arr[mid] > k) {
+        //         end = mid - 1;
+        //     }
+        // }
+
+        // if (res < 0)
+        //     System.out.println(arr[0]);
+        // else
+        //     System.out.println(res);
     }
 }
